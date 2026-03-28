@@ -49,6 +49,12 @@ p{
     display: flex;
 }
 
+.table{
+    padding-left: 200px;
+}
+
 p{
     padding-right: 10px;
 }
+
+
