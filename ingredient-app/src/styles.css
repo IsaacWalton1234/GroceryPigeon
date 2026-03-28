@@ -90,4 +90,16 @@ p {
     margin: 0;
 }
 
+.pigeon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.pigeon img {
+    max-width: 520px;
+    height: auto;
+}
+
 
