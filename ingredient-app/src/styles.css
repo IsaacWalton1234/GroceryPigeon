@@ -35,7 +35,7 @@ button:hover {
 
 .table {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
     max-width: 600px;
 }
@@ -46,7 +46,9 @@ button:hover {
 
 .title_ingredient,
 .title_price,
-.title_shop {
+.title_shop,
+.title_link,
+.title_image {
     font-weight: bold;
     padding: 10px;
     background-color: #ffffff;
@@ -65,6 +67,23 @@ button:hover {
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.image {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+}
+
+.image img {
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: contain;
 }
 
 p {

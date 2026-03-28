@@ -29,6 +29,13 @@ function addResultsToTable(result) {
         const ingredientRow = document.createElement('section');
         ingredientRow.className = 'ingredient_row';
         
+        const imageDiv = document.createElement('div');
+        imageDiv.className = 'image';
+        const img = document.createElement('img');
+        img.src = `https://www.trolley.co.uk/img/product/${result.productId}`;
+        img.alt = result.name;
+        imageDiv.appendChild(img);
+        
         const ingredientDiv = document.createElement('div');
         ingredientDiv.className = 'ingredients';
         ingredientDiv.textContent = result.name;
@@ -41,9 +48,16 @@ function addResultsToTable(result) {
         shopDiv.className = 'shop';
         shopDiv.textContent = result.store;
         
+        const linkDiv = document.createElement('button');
+        linkDiv.className = 'link';
+        linkDiv.textContent = 'Visit';
+        linkDiv.onclick = () => window.open(result.url, '_blank');
+        
+        ingredientRow.appendChild(imageDiv);
         ingredientRow.appendChild(ingredientDiv);
         ingredientRow.appendChild(priceDiv);
         ingredientRow.appendChild(shopDiv);
+        ingredientRow.appendChild(linkDiv);
         
         table.appendChild(ingredientRow);
         input.value = '';

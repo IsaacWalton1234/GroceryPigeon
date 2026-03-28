@@ -8,21 +8,26 @@
     <script type="module" src="index.js"></script>
 </head>
 <body>
+    <div class="pigeon">
+        <img src="pigeon.png" alt="Pigeon">
+    </div>
     <div class="container">
         <h1>Ingredient Search</h1>
         <form id="ingredient-form">
-            <input type="text" id="ingredient-input" placeholder="Enter an ingredient" required>
-            <button id="search">Search</button>
+            <input type="text" id="ingredient-input" placeholder="Enter an ingredient" required spellcheck="true">
+            <button id="search" type="submit">Search</button>
         </form>
         <p class="ingredient-list" id="ingredients"></p>
 
         <section class="table" id="table">   
             <section class="title">
-            <p class="title_ingredient">Ingredient</p>
-            <p class="title_price">Price</p>
-            <p class="title_shop">Shop</p>
+                <p class="title_image">Image</p>
+                <p class="title_ingredient">Ingredient</p>
+                <p class="title_price">Price</p>
+                <p class="title_shop">Shop</p>
+                <p class="title_link">Link</p>
+            </section>
         </section>
     </div>
-</section>
 </body>
 </html>
