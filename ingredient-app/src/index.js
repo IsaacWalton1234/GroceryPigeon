@@ -17,7 +17,7 @@ form.addEventListener('submit', async (event) => {
 });
 
 async function fetchIngredients(ingredient) {
-    const response = await fetch(`https://api.example.com/ingredients?query=${ingredient}`);
+    const response = await fetch(`https://www.trolley.co.uk/search/?from=search&q=${ingredient}&order=price`);
     if (!response.ok) {
         throw new Error('Network response was not ok');
     }
