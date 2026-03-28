@@ -33,67 +33,42 @@ button:hover {
     background-color: #218838;
 }
 
-.title_ingredient{
-    margin-top: 20px;
+.table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    max-width: 600px;
+}
+
+.title {
+    display: contents;
+}
+
+.title_ingredient,
+.title_price,
+.title_shop {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+.ingredient_row {
+    display: contents;
+}
+
+.ingredients,
+.price,
+.shop {
     padding: 10px;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.title_price{
-    margin-top: 20px;
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.title_shop{
-    margin-top: 20px;
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.ingredients{
-    margin-top: 20px;
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.price{
-    margin-top: 20px;
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.shop{
-    margin-top: 20px;
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.ingredient_row{
-    display: flex;
-}
-
-.title{
-    display: flex;
-}
-
-.table{
-    padding-left: 200px;
-}
-
-p{
-    padding-right: 10px;
+p {
+    margin: 0;
 }
 
 

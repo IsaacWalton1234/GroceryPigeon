@@ -1,6 +1,6 @@
 const form = document.getElementById('ingredient-form');
 const input = document.getElementById('ingredient-input');
-const resultsSection = document.getElementById('results');
+const table = document.getElementById('table');
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -8,10 +8,10 @@ form.addEventListener('submit', async (event) => {
     if (ingredient) {
         try {
             const result = await fetchIngredients(ingredient);
-            displayResults(result);
+            addResultsToTable(result);
         } catch (error) {
             console.error('Error fetching ingredients:', error);
-            resultsSection.innerHTML = '<p>Error fetching results. Please try again.</p>';
+            table.innerHTML += '<p>Error fetching results. Please try again.</p>';
         }
     }
 });
@@ -24,18 +24,28 @@ async function fetchIngredients(ingredient) {
     return response.json();
 }
 
-function displayResults(result) {
-    resultsSection.innerHTML = '';
+function addResultsToTable(result) {
     if (result && result.name) {
-        const resultItem = document.createElement('div');
-        resultItem.innerHTML = `
-            <h3>${result.name}</h3>
-            <p><strong>Price:</strong> £${result.price}</p>
-            <p><strong>Store:</strong> ${result.store}</p>
-            <a href="${result.url}" target="_blank">View Product</a>
-        `;
-        resultsSection.appendChild(resultItem);
-    } else {
-        resultsSection.innerHTML = '<p>No results found.</p>';
+        const ingredientRow = document.createElement('section');
+        ingredientRow.className = 'ingredient_row';
+        
+        const ingredientDiv = document.createElement('div');
+        ingredientDiv.className = 'ingredients';
+        ingredientDiv.textContent = result.name;
+        
+        const priceDiv = document.createElement('div');
+        priceDiv.className = 'price';
+        priceDiv.textContent = `£${result.price}`;
+        
+        const shopDiv = document.createElement('div');
+        shopDiv.className = 'shop';
+        shopDiv.textContent = result.store;
+        
+        ingredientRow.appendChild(ingredientDiv);
+        ingredientRow.appendChild(priceDiv);
+        ingredientRow.appendChild(shopDiv);
+        
+        table.appendChild(ingredientRow);
+        input.value = '';
     }
 }
