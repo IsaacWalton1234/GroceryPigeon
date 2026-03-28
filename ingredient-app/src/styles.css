@@ -33,7 +33,7 @@ button:hover {
     background-color: #218838;
 }
 
-p{
+.title_ingredient{
     margin-top: 20px;
     padding: 10px;
     background-color: white;
@@ -41,6 +41,45 @@ p{
     border-radius: 4px;
 }
 
+.title_price{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.title_shop{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.ingredients{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.price{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.shop{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 .ingredient_row{
     display: flex;
 }
