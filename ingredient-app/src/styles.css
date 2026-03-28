@@ -33,10 +33,67 @@ button:hover {
     background-color: #218838;
 }
 
-.results {
+.title_ingredient{
     margin-top: 20px;
     padding: 10px;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
+.title_price{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.title_shop{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.ingredients{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.price{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.shop{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.ingredient_row{
+    display: flex;
+}
+
+.title{
+    display: flex;
+}
+
+.table{
+    padding-left: 200px;
+}
+
+p{
+    padding-right: 10px;
+}
+
+
